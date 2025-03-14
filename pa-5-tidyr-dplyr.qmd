@@ -179,7 +179,11 @@ Hint: **Do not** overwrite your cleaned up dataset!
 
 ```{r}
 #| label: pivoting-military-data-longer
-
+ military_long <- military_clean |>
+  pivot_longer(cols = "1988":"2019",
+               names_to = "year",
+               values_to = "spending")
+  
 
 ```
 
