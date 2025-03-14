@@ -1,6 +1,6 @@
 ---
 title: "PA 5: Military Spending"
-author: "Megan Redican and Efrain ramirez"
+author: "Megan Redican and Efrain Ramirez"
 format: html
 embed-resources: true
 code-tools: true
@@ -103,7 +103,7 @@ Run the code below to read in the *"Regional totals"* data.
 
 ```{r}
 #| label: regional-totals
-cont_region <- read_xlsx("data/gov_spending_per_capita.xlsx", 
+cont_region <- read_xlsx("gov_spending_per_capita.xlsx", 
                       sheet = "Regional totals", 
                       skip = 14,
                       n_max = 36) |> 
@@ -130,7 +130,7 @@ military_clean <- military |>
 
 **2. Write a sentence describing what the line of code `filter(!Country %in% regions)` is doing in the context of the data.**  
 
->Insert Answer Here
+> It is just exluding the regions from the country column, so it only includes countries rather than regions.
 
 
 ### Canvas Question #1
@@ -143,8 +143,8 @@ military_clean <- military |>
 #| label: inspecting-what-regions-were-not-removed
 
 military_clean |> 
-  filter(if_all(.cols = _________,   #hint: what is the easiest way to include every column except `Country`
-                .fns = __________)   #hint: what function in R (there are several) tests if a value is missing or is NA?
+  filter(if_all(.cols = -Country,   #hint: what is the easiest way to include every column except `Country`
+                .fns = is.na)   #hint: what function in R (there are several) tests if a value is missing or is NA?
          )
 ```
 
