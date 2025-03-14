@@ -230,5 +230,6 @@ ggplot() +
 ### Canvas Question 2 & Question 3
 
 **6. Looking at the plot you created above, which Eastern European country had the second highest median military expenditure?.**
-
+Armenia
 **7. Looking at the plot you created above, which Eastern European country had the largest variability in military expenditures over time?**
+Georgia
